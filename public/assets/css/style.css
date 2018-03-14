@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.jumbotron {
+    border: 10px dashed white;
+    background-color: black;
+}
+
+#burger-menu, #devoured, ::placeholder {
+    font-size: 30px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+}
+
+.button, #devour-burger {
+    font-size: 18px;
+    font-family: 'VT323', monospace;
+    letter-spacing: 2px;
+}
+
+h1, h2 {
+    font-family: 'Bangers', cursive;
+}
+
+h1 {
+    letter-spacing: 2px;
+}
+
+h2 {
+    letter-spacing: 4px;
+}

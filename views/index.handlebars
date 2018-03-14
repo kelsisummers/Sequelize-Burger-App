@@ -1,0 +1,58 @@
+<div class="container">
+  <header class="header clearfix">
+    {{!-- Header --}}
+    <h1 class="text-muted" style="font-size: 80px">Eat-Da-Burger</h1>
+  </header>     
+  
+  <div class="jumbotron jumbotron-fluid text-center">
+    {{!-- Hamburger GIF --}}
+    <div><img src = "assets/css/img/spinning-patty.gif" style= "width: 200px; padding-bottom: 10px; padding-top: -10px" alt="burger-gif"></div>
+    {{!-- Form --}}
+    <h1 class="display-4">Enter A Burger</h1>
+    <form class="create-form align-items-center">
+      <div class="form-group form-control-lg">
+        <textarea class="form-control mx-auto" id="burger" name="burger" placeholder="chzbrgr" style="width: 30vw; font-family: 'Bangers', cursive; font-size: 30px; letter-spacing: 2px; color: black" rows="1"></textarea>
+      </div>
+      <button class="btn button" id="add-burger" type="submit">Add Burger</button>
+    </form>
+    <br>                    
+
+    <div class="row">
+      {{!-- New Burgers Column --}}
+      <div class="col-lg-6">
+        <h2>The Menu:</h2>
+        <div id="burger-menu">
+          <ul class="list-unstyled">
+            {{#each burgers}}
+            {{#unless devoured}}
+              {{> burgers/burger-block}}
+            {{/unless}}
+            {{/each}}
+          </ul>
+      </div>
+      </div>
+
+      {{!-- Burgers Eaten Column --}}
+      <div class="col-lg-6">
+        <h2>Burgers Devoured:</h2>
+        <br>
+        <div id="devoured">
+          <ul class="list-unstyled" style="color:darkgray">
+            {{#each burgers}}
+              {{#if devoured}}
+              {{> burgers/burger-block}}
+              {{/if}}
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- Footer  --}}
+<footer class="footer">
+  <div class="container text-center">
+    <span class="text-muted">© 2017 Kelsi Summers</span>
+  </div>
+</footer>  
