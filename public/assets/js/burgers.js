@@ -36,7 +36,7 @@ $(document).ready(function() {
     var eaten = $(this).data("eaten");
 
     var newEatState = {
-      devoured: eaten
+      devoured: true
     };
 
     // Send the PUT Request
