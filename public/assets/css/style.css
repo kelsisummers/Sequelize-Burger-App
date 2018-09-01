@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: black;
     color: white;
 }
@@ -30,4 +30,175 @@ h1 {
 
 h2 {
     letter-spacing: 4px;
+} */
+
+body {
+	font-family: 'VT323', monospace;
+}
+
+div#burger-menu {
+	width: 50%;
+	min-width: 300px;
+}
+
+.wrapper {
+	width: 100vw;
+	/* padding: 50px; */
+	display: grid;
+	grid-template-areas: 'img img' 'form form' 'col1 col2' '. footer';
+	grid-template-rows: repeat(3, auto) 50px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-row-gap: 50px;
+}
+.image-container {
+	grid-area: img
+}
+
+.form-wrapper {
+	grid-area: form;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.form-title {
+	padding-right: 50px;
+}
+
+.form-group {
+	display: flex;
+	padding-left: 0;
+	padding-right: 0;
+	flex-wrap: wrap;
+}
+
+.column1, .column2 {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.column1 {
+	grid-area: col1;
+}
+
+.column2 {
+	grid-area: col2;
+}
+
+.footer {
+	grid-area: footer;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 25px;
+	align-items: flex-end;
+}
+
+button#add-burger {
+	margin-left: 50px;
+	width: auto;
+	padding: 0 20px;
+	background-color: rgb(221,221,221);
+	height: 60px;
+}
+
+h1.app-title {
+	position: absolute;
+	z-index: 100;
+	padding-left: 50px;
+	padding-top: 25px;
+	font-family: 'Bangers', cursive;
+	font-size: 70px;
+	letter-spacing: 4px;
+	color: #f7f7f7;
+}
+
+/* header.header.clearfix {
+  grid-area: nav;
+  padding-left: 25px;
+  padding-top: 25px;
+} */
+
+/* .jumbotron { */
+  /* border: 10px dashed white; */
+  /* background-color:k; */
+  /* grid-area: row1; */
+  /* padding: 0; */
+/* } */
+
+img.burger-gif {
+	width: 100%;
+	height: auto;
+	max-height: 500px;
+	object-fit: cover;
+	object-position: 100% 35%;
+	position: relative;
+}
+
+footer.footer {
+	grid-area: footer;
+}
+
+.burger-input {
+	width: 30vw;
+	min-width: 300px;
+	font-size: 30px;
+	letter-spacing: 2px; color: black
+}
+
+.devoured-burger {
+	color:darkgray;
+}
+
+.devoured-list{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+button#devour-burger{
+	margin: 10px;
+	background-color: rgb(221,221,221);
+	width: auto;
+	height: 45px;
+}
+
+.btn {
+	font-size: 1.25rem;
+	text-transform: uppercase;
+}
+
+li {
+	padding: 5px;
+	text-transform: uppercase;
+	font-size: 1.25rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+	.wrapper {
+		grid-template-areas: 'img' 'form' 'col1' 'col2' 'footer';
+		grid-template-columns: unset;
+		grid-template-rows: repeat(4, auto) 50px;
+		grid-row-gap: 25px;
+	}
+	.form-title {
+		padding: 0;
+	}
+	button#add-burger {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+	}
+	.form-group {
+		flex-direction: column;
+	}
+	li {
+		margin-left: 20px;
+	}
 }
