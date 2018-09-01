@@ -1,37 +1,3 @@
-/* body {
-    background-color: black;
-    color: white;
-}
-
-.jumbotron {
-    border: 10px dashed white;
-    background-color: black;
-}
-
-#burger-menu, #devoured, ::placeholder {
-    font-size: 30px;
-    font-family: 'Bangers', cursive;
-    letter-spacing: 2px;
-}
-
-.button, #devour-burger {
-    font-size: 18px;
-    font-family: 'VT323', monospace;
-    letter-spacing: 2px;
-}
-
-h1, h2 {
-    font-family: 'Bangers', cursive;
-}
-
-h1 {
-    letter-spacing: 2px;
-}
-
-h2 {
-    letter-spacing: 4px;
-} */
-
 body {
 	font-family: 'VT323', monospace;
 }
@@ -43,7 +9,6 @@ div#burger-menu {
 
 .wrapper {
 	width: 100vw;
-	/* padding: 50px; */
 	display: grid;
 	grid-template-areas: 'img img' 'form form' 'col1 col2' '. footer';
 	grid-template-rows: repeat(3, auto) 50px;
@@ -115,19 +80,6 @@ h1.app-title {
 	color: #f7f7f7;
 }
 
-/* header.header.clearfix {
-  grid-area: nav;
-  padding-left: 25px;
-  padding-top: 25px;
-} */
-
-/* .jumbotron { */
-  /* border: 10px dashed white; */
-  /* background-color:k; */
-  /* grid-area: row1; */
-  /* padding: 0; */
-/* } */
-
 img.burger-gif {
 	width: 100%;
 	height: auto;
@@ -180,6 +132,7 @@ li {
 	align-items: center;
 }
 
+/* Responsive Queries */
 @media only screen and (max-width: 600px) {
 	.wrapper {
 		grid-template-areas: 'img' 'form' 'col1' 'col2' 'footer';
