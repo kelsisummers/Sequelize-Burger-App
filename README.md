@@ -1,6 +1,6 @@
 # Sequelize-Burger-App
 
-Hosted App Link: https://fierce-tor-63840.herokuapp.com/
+<strong>Hosted App Link: https://fierce-tor-63840.herokuapp.com/</strong>
 
 GitHub Repo: https://github.com/kelsisummers/Sequelize-Burger-App.git
 
